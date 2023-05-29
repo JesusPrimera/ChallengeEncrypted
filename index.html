@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Encriptador/Desencriptador</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div id="header-container">
+        <img id="logo-image" src="Imagenes/AluraLatam.png" alt="Logo AluraOracle">
+    </div>
+
+    <div class="container">
+        <div>
+            <h1>Encriptador/Desencriptador</h1>
+            <label for="word">Palabra:</label>
+            <input type="text" id="word" size="30" placeholder="Pulse aquí para escribir su palabra" onfocus="clearPlaceholder()" onblur="restorePlaceholder()">
+            <button onclick="encrypt()">Encriptar</button>
+        </div>
+        <div>
+            <label class="result-label" for="result">Resultado:</label>
+            <textarea id="result" rows="5" cols="30" readonly></textarea>
+            <button class="copy-button" onclick="copyResult()">Copiar</button>
+            <button onclick="decrypt()">Desencriptar</button>
+        </div>
+    </div>
+
+    <div id="footer-container">
+        <p id="footer-text">Creador Jesús Primera</p>
+    </div>
+
+    <div id="message-container" class="message-container">
+        <img id="encryption-image" class="message-image" src="Imagenes/encriptado.png" alt="Imagen Encriptada">
+        <p id="encryption-message" class="message-text">La palabra ha sido encriptada.</p>
+        <img id="decryption-image" class="message-image" src="Imagenes/desencriptado.png" alt="Imagen Desencriptada">
+        <p id="decryption-message" class="message-text">La palabra ha sido desencriptada.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

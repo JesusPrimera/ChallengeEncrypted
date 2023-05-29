@@ -1,0 +1,157 @@
+body {
+  font-family: 'Montserrat Alternates', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("Imagenes/Fondo2.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 400px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 18px;
+  text-align: center; /* Centra el texto del label */
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  text-align: center; /* Centra el texto del botón */
+  position: relative; /* Agrega posición relativa para el brillo */
+  overflow: hidden; /* Oculta el brillo que se sale del botón */
+}
+
+button:before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.8) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+button:hover:before {
+  opacity: 1;
+}
+
+.result-label {
+  display: block;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center; /* Centra el texto del resultado */
+}
+
+#result {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+}
+
+.copy-button {
+  background-color: #008CBA;
+  font-size: 18px;
+  width: 50%; /* Ajusta el ancho del botón al 50% del contenedor */
+  margin-right: 5px; /* Agrega un margen derecho para separar los botones */
+  position: relative; /* Agrega posición relativa para el brillo */
+  overflow: hidden; /* Oculta el brillo que se sale del botón */
+}
+
+.copy-button:before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.8) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.copy-button:hover:before {
+  opacity: 1;
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.message-image {
+  display: none;
+  max-width: 100%;
+  height: auto;
+  padding: 50px;
+}
+
+.message-text {
+  display: none;
+  text-align: center;
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+#header-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+#logo-image {
+  max-width: 200px;
+  height: auto;
+}
+
+#footer-container {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  text-align: right;
+}
+
+#footer-text {
+  font-size: 25px;
+  margin: 0;
+}
